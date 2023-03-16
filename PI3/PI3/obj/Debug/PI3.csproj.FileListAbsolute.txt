@@ -12,3 +12,17 @@ C:\Users\Pichau\source\repos\PI3\PI3\obj\Debug\PI3.csproj.CoreCompileInputs.cach
 C:\Users\Pichau\source\repos\PI3\PI3\obj\Debug\PI3.csproj.CopyComplete
 C:\Users\Pichau\source\repos\PI3\PI3\obj\Debug\PI3.exe
 C:\Users\Pichau\source\repos\PI3\PI3\obj\Debug\PI3.pdb
+C:\Users\Gusta\source\repos\PI3-Cartagena\PI3\PI3\bin\Debug\PI3.exe.config
+C:\Users\Gusta\source\repos\PI3-Cartagena\PI3\PI3\bin\Debug\PI3.exe
+C:\Users\Gusta\source\repos\PI3-Cartagena\PI3\PI3\bin\Debug\PI3.pdb
+C:\Users\Gusta\source\repos\PI3-Cartagena\PI3\PI3\bin\Debug\CartagenaServer.dll
+C:\Users\Gusta\source\repos\PI3-Cartagena\PI3\PI3\bin\Debug\CartagenaServer.xml
+C:\Users\Gusta\source\repos\PI3-Cartagena\PI3\PI3\obj\Debug\PI3.csproj.AssemblyReference.cache
+C:\Users\Gusta\source\repos\PI3-Cartagena\PI3\PI3\obj\Debug\PI3.csproj.SuggestedBindingRedirects.cache
+C:\Users\Gusta\source\repos\PI3-Cartagena\PI3\PI3\obj\Debug\PI3.Form1.resources
+C:\Users\Gusta\source\repos\PI3-Cartagena\PI3\PI3\obj\Debug\PI3.Properties.Resources.resources
+C:\Users\Gusta\source\repos\PI3-Cartagena\PI3\PI3\obj\Debug\PI3.csproj.GenerateResource.cache
+C:\Users\Gusta\source\repos\PI3-Cartagena\PI3\PI3\obj\Debug\PI3.csproj.CoreCompileInputs.cache
+C:\Users\Gusta\source\repos\PI3-Cartagena\PI3\PI3\obj\Debug\PI3.csproj.CopyComplete
+C:\Users\Gusta\source\repos\PI3-Cartagena\PI3\PI3\obj\Debug\PI3.exe
+C:\Users\Gusta\source\repos\PI3-Cartagena\PI3\PI3\obj\Debug\PI3.pdb

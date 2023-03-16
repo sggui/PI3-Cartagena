@@ -49,6 +49,8 @@
             this.txtbExibePartidasJogando = new System.Windows.Forms.ListBox();
             this.btnListaPartidasEncerradas = new System.Windows.Forms.Button();
             this.txtbExibePartidasEncerradas = new System.Windows.Forms.ListBox();
+            this.btnExibeJogadores = new System.Windows.Forms.Button();
+            this.txtbListaJogadores = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // btnListaPartidasAbertas
@@ -222,11 +224,31 @@
             this.txtbExibePartidasEncerradas.Size = new System.Drawing.Size(229, 82);
             this.txtbExibePartidasEncerradas.TabIndex = 20;
             // 
+            // btnExibeJogadores
+            // 
+            this.btnExibeJogadores.Location = new System.Drawing.Point(472, 3);
+            this.btnExibeJogadores.Name = "btnExibeJogadores";
+            this.btnExibeJogadores.Size = new System.Drawing.Size(144, 23);
+            this.btnExibeJogadores.TabIndex = 22;
+            this.btnExibeJogadores.Text = "Listar Jogadores";
+            this.btnExibeJogadores.UseVisualStyleBackColor = true;
+            this.btnExibeJogadores.Click += new System.EventHandler(this.btnExibeJogadores_Click);
+            // 
+            // txtbListaJogadores
+            // 
+            this.txtbListaJogadores.FormattingEnabled = true;
+            this.txtbListaJogadores.Location = new System.Drawing.Point(147, 3);
+            this.txtbListaJogadores.Name = "txtbListaJogadores";
+            this.txtbListaJogadores.Size = new System.Drawing.Size(319, 95);
+            this.txtbListaJogadores.TabIndex = 23;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtbListaJogadores);
+            this.Controls.Add(this.btnExibeJogadores);
             this.Controls.Add(this.txtbExibePartidasEncerradas);
             this.Controls.Add(this.btnListaPartidasEncerradas);
             this.Controls.Add(this.txtbExibePartidasJogando);
@@ -278,6 +300,8 @@
         private System.Windows.Forms.ListBox txtbExibePartidasJogando;
         private System.Windows.Forms.Button btnListaPartidasEncerradas;
         private System.Windows.Forms.ListBox txtbExibePartidasEncerradas;
+        private System.Windows.Forms.Button btnExibeJogadores;
+        private System.Windows.Forms.ListBox txtbListaJogadores;
     }
 }
 

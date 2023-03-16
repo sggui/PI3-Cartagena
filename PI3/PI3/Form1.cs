@@ -21,6 +21,7 @@ namespace PI3
         int idPartida;
         private void btnlistarPartidas_Click(object sender, EventArgs e)
         {
+            txtbExibePartidasAbertas.Items.Clear();
             string retorno = Jogo.ListarPartidas("A");
             retorno = retorno.Replace("\r", "");
 
@@ -30,25 +31,31 @@ namespace PI3
             {
                 txtbExibePartidasAbertas.Items.Add(partidas[i]);
             }
-            
+
         }
 
         private void selecionaPartida_Click(object sender, EventArgs e)
         {
-            string partida = txtbExibePartidasAbertas.SelectedItem.ToString();
-            string[] itens = partida.Split(',');
-
-            idPartida = Convert.ToInt32(itens[0]);
-            string nomePartida = (itens[1]);
-            string dataPartida = (itens[2]);
-            string statusPartida = (itens[3]);
-
-            if (statusPartida == "A")
+            if (txtbExibePartidasAbertas.SelectedItem == null)
             {
-                statusPartida = statusPartida.Replace("A", "Aberta");
+                lblOrganizaPartida.Text = "Selecione uma partida";
             }
-            lblOrganizaPartida.Text = "Id: " + idPartida.ToString() + "\nNome: " + nomePartida + "\nData da partida: " + dataPartida + "\nStatus da partida: " + statusPartida;
+            else
+            {
+                string partida = txtbExibePartidasAbertas.SelectedItem.ToString();
+                string[] itens = partida.Split(',');
 
+                idPartida = Convert.ToInt32(itens[0]);
+                string nomePartida = (itens[1]);
+                string dataPartida = (itens[2]);
+                string statusPartida = (itens[3]);
+
+                if (statusPartida == "A")
+                {
+                    statusPartida = statusPartida.Replace("A", "Aberta");
+                }
+                lblOrganizaPartida.Text = "Id: " + idPartida.ToString() + "\nNome: " + nomePartida + "\nData da partida: " + dataPartida + "\nStatus da partida: " + statusPartida;
+            }
 
         }
 
@@ -73,6 +80,7 @@ namespace PI3
 
         private void btnlistaPartidaJogando_Click(object sender, EventArgs e)
         {
+            txtbExibePartidasJogando.Items.Clear();
             string retorno = Jogo.ListarPartidas("J");
             retorno = retorno.Replace("\r", "");
 
@@ -82,7 +90,6 @@ namespace PI3
             {
                 txtbExibePartidasJogando.Items.Add(partidas[i]);
             }
-
         }
 
         private void btnPartidasEncerradas_Click(object sender, EventArgs e)
@@ -103,5 +110,35 @@ namespace PI3
                 txtbExibePartidasEncerradas.Items.Add(partidas[i]);
             }
         }
+
+        private void btnExibeJogadores_Click(object sender, EventArgs e)
+        {
+            if (txtbExibePartidasAbertas.SelectedItem == null)
+            {
+                lblOrganizaPartida.Text = "Selecione uma partida";
+            }
+            else
+            {
+                txtbListaJogadores.Items.Clear();
+                string partida = txtbExibePartidasAbertas.SelectedItem.ToString();
+                string[] itens = partida.Split(',');
+
+                idPartida = Convert.ToInt32(itens[0]);
+                string nomePartida = (itens[1]);
+                string dataPartida = (itens[2]);
+                string statusPartida = (itens[3]);
+
+                string listJogadores = Jogo.ListarJogadores(idPartida);
+                string[] jogadores = listJogadores.Split(',');
+
+
+                if (statusPartida == "A")
+                {
+                    txtbListaJogadores.Items.Add($@"{nomePartida} Jogadores: {Jogo.ListarJogadores(idPartida)}");
+                }
+            } 
+        }
+
     }
 }
+
