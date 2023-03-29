@@ -18,6 +18,9 @@ namespace PI3
             InitializeComponent();
         }
 
+
+      
+
         int idPartida;
         private void btnlistarPartidas_Click(object sender, EventArgs e)
         {
@@ -139,6 +142,27 @@ namespace PI3
             } 
         }
 
+        private void btnIniciarPartida_Click(object sender, EventArgs e)
+        {
+            string partida = txtbExibePartidasAbertas.SelectedItem.ToString();
+            string[] itens = partida.Split(',');
+
+            idPartida = Convert.ToInt32(itens[0]);
+
+            string retorno = lblDadosJogadorPartida.Text;
+
+            string[] retorno2 = retorno.Split(',');
+
+            int idJogador = Convert.ToInt32(retorno2[0]);
+            string senhaJogador = (retorno2[1]);
+
+            Form2 teste = new Form2(idPartida);
+            teste.Show();
+            
+            teste.txtbIdJogadorPartida.Items.Add($@"Id do Jogador: {(Jogo.IniciarPartida(idJogador, senhaJogador))}, Senha do Jogador: {senhaJogador}");
+        }
+
+     
     }
 }
 

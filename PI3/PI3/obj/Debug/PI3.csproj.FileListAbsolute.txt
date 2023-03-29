@@ -26,3 +26,4 @@ C:\Users\Gusta\source\repos\PI3-Cartagena\PI3\PI3\obj\Debug\PI3.csproj.CoreCompi
 C:\Users\Gusta\source\repos\PI3-Cartagena\PI3\PI3\obj\Debug\PI3.csproj.CopyComplete
 C:\Users\Gusta\source\repos\PI3-Cartagena\PI3\PI3\obj\Debug\PI3.exe
 C:\Users\Gusta\source\repos\PI3-Cartagena\PI3\PI3\obj\Debug\PI3.pdb
+C:\Users\Gusta\source\repos\PI3-Cartagena\PI3\PI3\obj\Debug\PI3.Form2.resources
