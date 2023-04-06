@@ -21,7 +21,7 @@ namespace PI3
 
       
 
-        int idPartida;
+       public int idPartida;
         private void btnlistarPartidas_Click(object sender, EventArgs e)
         {
             txtbExibePartidasAbertas.Items.Clear();
@@ -156,7 +156,7 @@ namespace PI3
             int idJogador = Convert.ToInt32(retorno2[0]);
             string senhaJogador = (retorno2[1]);
 
-            Form2 teste = new Form2(idPartida);
+            Form2 teste = new Form2(idPartida, idJogador, senhaJogador);
             teste.Show();
             
             teste.txtbIdJogadorPartida.Items.Add($@"Id do Jogador: {(Jogo.IniciarPartida(idJogador, senhaJogador))}, Senha do Jogador: {senhaJogador}");

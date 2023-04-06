@@ -13,29 +13,26 @@ namespace PI3
 {
     public partial class Form2 : Form
     {
+       public int idPartida;
+       public int idJogador;
+       public string senhaJogador;
+
         public Form2()
         {
             InitializeComponent();
         }
 
-        public Form2(int parametro) : this()
+        public Form2(int idPartida, int idJogador, string senhaJogador) : this()
         {
-            txtbIdPartida.Items.Add(parametro);
+           this.idPartida = idPartida;
+           this.idJogador = idJogador;
+           this.senhaJogador = senhaJogador;
         }
 
         private void btnMostrarMao_Click(object sender, EventArgs e)
         {
-
-            string idJogador1 = idJogador.Text;
-            string senhaJogador1 = senhaJogador.Text;
-           int idJogador2 = Convert.ToInt32(idJogador1);
-
-          txtbMao.Items.Add(Jogo.ConsultarMao(idJogador2, senhaJogador1));
-            
-
+          txtbMao.Items.Add(Jogo.ConsultarMao(idJogador, senhaJogador));
         }
-
-
 
 
         private void Form2_Load(object sender, EventArgs e)
@@ -45,21 +42,12 @@ namespace PI3
 
         private void btnMostrarMesa_Click(object sender, EventArgs e)
         {
-
-            string idPartida1 = txtbIdPartida.SelectedItem.ToString();
-            int idPartida = Convert.ToInt32(idPartida1);
             txtbTabuleiro.Items.Add(Jogo.ExibirTabuleiro(idPartida));
-
         }
 
         private void btnJogar_Click(object sender, EventArgs e)
         {
-            string idJogadorForm1 = idJogador.Text;
-            string senhaJogador1 = senhaJogador.Text;
-            int idJogador1 = Convert.ToInt32(idJogadorForm1);
-
-            txtbTabuleiro.Items.Add(Jogo.Jogar(idJogador1, senhaJogador1));
-          
+            txtbTabuleiro.Items.Add(Jogo.Jogar(idJogador, senhaJogador));
         }
     }
 }

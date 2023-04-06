@@ -31,10 +31,6 @@
             this.txtbIdJogadorPartida = new System.Windows.Forms.ListBox();
             this.btnMostrarMao = new System.Windows.Forms.Button();
             this.txtbMao = new System.Windows.Forms.ListBox();
-            this.idJogador = new System.Windows.Forms.TextBox();
-            this.senhaJogador = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnMostrarMesa = new System.Windows.Forms.Button();
             this.txtbTabuleiro = new System.Windows.Forms.ListBox();
             this.txtbIdPartida = new System.Windows.Forms.ListBox();
@@ -67,38 +63,6 @@
             this.txtbMao.Size = new System.Drawing.Size(328, 95);
             this.txtbMao.TabIndex = 2;
             // 
-            // idJogador
-            // 
-            this.idJogador.Location = new System.Drawing.Point(359, 91);
-            this.idJogador.Name = "idJogador";
-            this.idJogador.Size = new System.Drawing.Size(100, 20);
-            this.idJogador.TabIndex = 3;
-            // 
-            // senhaJogador
-            // 
-            this.senhaJogador.Location = new System.Drawing.Point(359, 144);
-            this.senhaJogador.Name = "senhaJogador";
-            this.senhaJogador.Size = new System.Drawing.Size(100, 20);
-            this.senhaJogador.TabIndex = 4;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(359, 71);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Id Jogador";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(359, 125);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Senha Jogador";
-            // 
             // btnMostrarMesa
             // 
             this.btnMostrarMesa.Location = new System.Drawing.Point(12, 192);
@@ -127,7 +91,7 @@
             // 
             // btnJogar
             // 
-            this.btnJogar.Location = new System.Drawing.Point(505, 91);
+            this.btnJogar.Location = new System.Drawing.Point(371, 91);
             this.btnJogar.Name = "btnJogar";
             this.btnJogar.Size = new System.Drawing.Size(140, 37);
             this.btnJogar.TabIndex = 10;
@@ -144,10 +108,6 @@
             this.Controls.Add(this.txtbIdPartida);
             this.Controls.Add(this.txtbTabuleiro);
             this.Controls.Add(this.btnMostrarMesa);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.senhaJogador);
-            this.Controls.Add(this.idJogador);
             this.Controls.Add(this.txtbMao);
             this.Controls.Add(this.btnMostrarMao);
             this.Controls.Add(this.txtbIdJogadorPartida);
@@ -155,7 +115,6 @@
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -164,10 +123,6 @@
         public System.Windows.Forms.ListBox txtbIdJogadorPartida;
         private System.Windows.Forms.Button btnMostrarMao;
         private System.Windows.Forms.ListBox txtbMao;
-        private System.Windows.Forms.TextBox idJogador;
-        private System.Windows.Forms.TextBox senhaJogador;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnMostrarMesa;
         private System.Windows.Forms.ListBox txtbTabuleiro;
         private System.Windows.Forms.ListBox txtbIdPartida;
