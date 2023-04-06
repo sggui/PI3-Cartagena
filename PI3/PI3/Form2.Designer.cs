@@ -33,8 +33,8 @@
             this.txtbMao = new System.Windows.Forms.ListBox();
             this.btnMostrarMesa = new System.Windows.Forms.Button();
             this.txtbTabuleiro = new System.Windows.Forms.ListBox();
-            this.txtbIdPartida = new System.Windows.Forms.ListBox();
             this.btnJogar = new System.Windows.Forms.Button();
+            this.btnPularVez = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtbIdJogadorPartida
@@ -81,14 +81,6 @@
             this.txtbTabuleiro.Size = new System.Drawing.Size(759, 134);
             this.txtbTabuleiro.TabIndex = 8;
             // 
-            // txtbIdPartida
-            // 
-            this.txtbIdPartida.FormattingEnabled = true;
-            this.txtbIdPartida.Location = new System.Drawing.Point(318, 12);
-            this.txtbIdPartida.Name = "txtbIdPartida";
-            this.txtbIdPartida.Size = new System.Drawing.Size(66, 30);
-            this.txtbIdPartida.TabIndex = 9;
-            // 
             // btnJogar
             // 
             this.btnJogar.Location = new System.Drawing.Point(371, 91);
@@ -99,13 +91,23 @@
             this.btnJogar.UseVisualStyleBackColor = true;
             this.btnJogar.Click += new System.EventHandler(this.btnJogar_Click);
             // 
+            // btnPularVez
+            // 
+            this.btnPularVez.Location = new System.Drawing.Point(542, 91);
+            this.btnPularVez.Name = "btnPularVez";
+            this.btnPularVez.Size = new System.Drawing.Size(141, 37);
+            this.btnPularVez.TabIndex = 11;
+            this.btnPularVez.Text = "Pular Vez";
+            this.btnPularVez.UseVisualStyleBackColor = true;
+            this.btnPularVez.Click += new System.EventHandler(this.btnPularVez_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnPularVez);
             this.Controls.Add(this.btnJogar);
-            this.Controls.Add(this.txtbIdPartida);
             this.Controls.Add(this.txtbTabuleiro);
             this.Controls.Add(this.btnMostrarMesa);
             this.Controls.Add(this.txtbMao);
@@ -125,7 +127,7 @@
         private System.Windows.Forms.ListBox txtbMao;
         private System.Windows.Forms.Button btnMostrarMesa;
         private System.Windows.Forms.ListBox txtbTabuleiro;
-        private System.Windows.Forms.ListBox txtbIdPartida;
         private System.Windows.Forms.Button btnJogar;
+        private System.Windows.Forms.Button btnPularVez;
     }
 }

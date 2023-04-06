@@ -31,7 +31,18 @@ namespace PI3
 
         private void btnMostrarMao_Click(object sender, EventArgs e)
         {
-          txtbMao.Items.Add(Jogo.ConsultarMao(idJogador, senhaJogador));
+            txtbMao.Items.Clear();
+            txtbMao.Items.Add(Jogo.VerificarVez(idPartida));
+            string retornoMao = Jogo.ConsultarMao(idJogador, senhaJogador);
+            string[] itens = retornoMao.Split(',');
+
+
+            for (int i = 0; i < itens.Length; i++)
+            {
+                txtbMao.Items.Add(itens[i]);
+            }
+
+
         }
 
 
@@ -42,10 +53,25 @@ namespace PI3
 
         private void btnMostrarMesa_Click(object sender, EventArgs e)
         {
-            txtbTabuleiro.Items.Add(Jogo.ExibirTabuleiro(idPartida));
+            txtbTabuleiro.Items.Clear();
+            string tabuleiro = Jogo.ExibirTabuleiro(idPartida);
+            string[] itens = tabuleiro.Split('\n');
+
+            for (int i = 0; i < itens.Length; i++)
+            {
+                txtbTabuleiro.Items.Add(itens[i]);
+            }
         }
 
         private void btnJogar_Click(object sender, EventArgs e)
+        {
+            int posicao = 0;
+            string simbolo = Jogo.ConsultarMao(idJogador, senhaJogador);
+            string[] simbolo1 = simbolo.Split(','); 
+            txtbTabuleiro.Items.Add(Jogo.Jogar(idJogador, senhaJogador, posicao, simbolo1[0]));
+        }
+
+        private void btnPularVez_Click(object sender, EventArgs e)
         {
             txtbTabuleiro.Items.Add(Jogo.Jogar(idJogador, senhaJogador));
         }
