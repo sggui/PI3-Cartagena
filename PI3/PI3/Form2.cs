@@ -13,9 +13,10 @@ namespace PI3
 {
     public partial class Form2 : Form
     {
-       public int idPartida;
-       public int idJogador;
-       public string senhaJogador;
+        public int idPartida;
+        public int idJogador;
+        public string senhaJogador;
+  
 
         public Form2()
         {
@@ -24,17 +25,16 @@ namespace PI3
 
         public Form2(int idPartida, int idJogador, string senhaJogador) : this()
         {
-           this.idPartida = idPartida;
-           this.idJogador = idJogador;
-           this.senhaJogador = senhaJogador;
+            this.idPartida = idPartida;
+            this.idJogador = idJogador;
+            this.senhaJogador = senhaJogador;
         }
 
         private void btnMostrarMao_Click(object sender, EventArgs e)
         {
             txtbMao.Items.Clear();
-            txtbMao.Items.Add(Jogo.VerificarVez(idPartida));
             string retornoMao = Jogo.ConsultarMao(idJogador, senhaJogador);
-            string[] itens = retornoMao.Split(',');
+            string[] itens = retornoMao.Split('\n');
 
 
             for (int i = 0; i < itens.Length; i++)
@@ -65,15 +65,19 @@ namespace PI3
 
         private void btnJogar_Click(object sender, EventArgs e)
         {
+            string simbolo = txtbMao.SelectedItem.ToString();
+            string[] simbolos = simbolo.Split(',');
             int posicao = 0;
-            string simbolo = Jogo.ConsultarMao(idJogador, senhaJogador);
-            string[] simbolo1 = simbolo.Split(','); 
-            txtbTabuleiro.Items.Add(Jogo.Jogar(idJogador, senhaJogador, posicao, simbolo1[0]));
+       
+            txtbTabuleiro.Items.Add(Jogo.Jogar(idJogador, senhaJogador, posicao, simbolos[0]));
         }
 
         private void btnPularVez_Click(object sender, EventArgs e)
         {
             txtbTabuleiro.Items.Add(Jogo.Jogar(idJogador, senhaJogador));
         }
+
+    
+
     }
 }
