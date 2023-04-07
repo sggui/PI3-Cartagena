@@ -22,6 +22,12 @@ namespace PI3
       
 
        public int idPartida;
+<<<<<<< HEAD
+
+       private Form2 form2Instance = null;
+
+=======
+>>>>>>> dc9834723eec0cb53d209c09e65c32fa2b407afe
         private void btnlistarPartidas_Click(object sender, EventArgs e)
         {
             txtbExibePartidasAbertas.Items.Clear();
@@ -156,15 +162,27 @@ namespace PI3
             int idJogador = Convert.ToInt32(retorno2[0]);
             string senhaJogador = (retorno2[1]);
 
+<<<<<<< HEAD
+            // verifica se já existe uma instância de Form2 aberta
+            if (form2Instance == null || form2Instance.IsDisposed)
+            {
+                form2Instance = new Form2(idPartida, idJogador, senhaJogador);
+                form2Instance.Show();
+                form2Instance.txtbIdJogadorPartida.Items.Add($@"Id do Jogador: {(Jogo.IniciarPartida(idJogador, senhaJogador))}, Senha do Jogador: {senhaJogador}");
+            }
+
+=======
+>>>>>>> dc9834723eec0cb53d209c09e65c32fa2b407afe
 
 
             Form2 teste = new Form2(idPartida, idJogador, senhaJogador);
             teste.Show();
             
             teste.txtbIdJogadorPartida.Items.Add($@"Id do Jogador: {(Jogo.IniciarPartida(idJogador, senhaJogador))}, Senha do Jogador: {senhaJogador}");
+
         }
 
-     
+
     }
 }
 
