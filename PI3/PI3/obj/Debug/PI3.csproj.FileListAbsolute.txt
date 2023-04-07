@@ -42,7 +42,6 @@ C:\Users\Erik\source\repos\PI3-Cartagena\PI3\PI3\obj\Debug\PI3.csproj.CoreCompil
 C:\Users\Erik\source\repos\PI3-Cartagena\PI3\PI3\obj\Debug\PI3.csproj.CopyComplete
 C:\Users\Erik\source\repos\PI3-Cartagena\PI3\PI3\obj\Debug\PI3.exe
 C:\Users\Erik\source\repos\PI3-Cartagena\PI3\PI3\obj\Debug\PI3.pdb
-<<<<<<< HEAD
 C:\Users\muril\source\repos\PI3-Cartagena1\PI3\PI3\bin\Debug\PI3.exe.config
 C:\Users\muril\source\repos\PI3-Cartagena1\PI3\PI3\bin\Debug\PI3.exe
 C:\Users\muril\source\repos\PI3-Cartagena1\PI3\PI3\bin\Debug\PI3.pdb
@@ -58,5 +57,3 @@ C:\Users\muril\source\repos\PI3-Cartagena1\PI3\PI3\obj\Debug\PI3.csproj.CoreComp
 C:\Users\muril\source\repos\PI3-Cartagena1\PI3\PI3\obj\Debug\PI3.csproj.CopyComplete
 C:\Users\muril\source\repos\PI3-Cartagena1\PI3\PI3\obj\Debug\PI3.exe
 C:\Users\muril\source\repos\PI3-Cartagena1\PI3\PI3\obj\Debug\PI3.pdb
-=======
->>>>>>> dc9834723eec0cb53d209c09e65c32fa2b407afe
