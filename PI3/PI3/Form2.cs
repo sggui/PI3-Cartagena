@@ -77,7 +77,46 @@ namespace PI3
             txtbTabuleiro.Items.Add(Jogo.Jogar(idJogador, senhaJogador));
         }
 
-    
+        private void cboSimbolo_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        private void txtPosicao_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        private void btnJogarFrente_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            this.txtbIdJogadorPartida.Text = Jogo.Jogar(Convert.ToInt32(this.idJogador), this.senhaJogador, Convert.ToInt32(this.txtPosicao.Text), this.cboSimbolo.Text.Substring(0, 1));
+            Cursor.Current = Cursors.Default;
+        }
+
+        private void btnJogarTras_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            this.txtbIdJogadorPartida.Text = Jogo.Jogar(Convert.ToInt32(this.idJogador), this.senhaJogador, Convert.ToInt32(this.txtPosicao.Text));
+            Cursor.Current = Cursors.Default;
+        }
+
+        private void btnHistorico_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            this.txtHistorico.Text = Jogo.ExibirHistorico(Convert.ToInt32(this.idPartida));
+            Cursor.Current = Cursors.Default;
+        }
+
+     
+
+        private void btnVerificarVez_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            this.txtbIdJogadorPartida.Text = Jogo.VerificarVez(Convert.ToInt32(this.idPartida));
+            Cursor.Current = Cursors.Default;
+        }
     }
 }

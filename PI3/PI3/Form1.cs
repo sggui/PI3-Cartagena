@@ -156,6 +156,8 @@ namespace PI3
             int idJogador = Convert.ToInt32(retorno2[0]);
             string senhaJogador = (retorno2[1]);
 
+
+
             Form2 teste = new Form2(idPartida, idJogador, senhaJogador);
             teste.Show();
             
